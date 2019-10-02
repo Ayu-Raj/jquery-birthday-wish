@@ -1,0 +1,296 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+    <style>
+        body,
+        .bg {
+            /* The image used */
+            background-image: url("images/bday5.jpg");
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .equilizer {
+            position: fixed;
+            bottom: -90px;
+            left: 5%;
+        }
+        
+        .audio {
+            display: none;
+        }
+        
+        .light {
+            position: fixed;
+            top: -40px;
+            left: -30px;
+            width: 105%;
+        }
+        
+        #text {
+            position: fixed;
+            top: 150px;
+            left: 500px;
+            height: 50%;
+        }
+        
+        .button {
+            background-color: rgb(67, 150, 218);
+            /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50%;
+            position: fixed;
+            top: 350px;
+            left: 0px;
+        }
+        
+        .year {
+            background-color: rgb(20, 152, 214);
+            /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10%;
+            position: fixed;
+            top: 350px;
+            left: -200px;
+        }
+        
+        h1 {
+            position: fixed;
+            top: 0px;
+            font-family: Courier;
+            font-size: 100px;
+            color: rgba(28, 39, 136, 0.877);
+        }
+        
+        #im {
+            position: fixed;
+            bottom: -330px;
+            left: 1200px;
+            width: 20%;
+            box-shadow: 0px 0px 5px rgb(255, 255, 255);
+            border-radius: 5%;
+        }
+        
+        #ima {
+            position: fixed;
+            bottom: -270px;
+            left: 120px;
+            width: 20%;
+            box-shadow: 0px 0px 5px rgb(255, 255, 255);
+            border-radius: 5%;
+        }
+        
+        .fri {
+            position: fixed;
+            bottom: -20px;
+            left: 160px;
+            font-family: Courier;
+            font-size: 50px;
+            color: rgba(28, 39, 136, 0.877);
+        }
+        
+        .bro {
+            position: fixed;
+            bottom: -20px;
+            left: 1260px;
+            font-family: Courier;
+            font-size: 50px;
+            color: rgba(28, 39, 136, 0.877);
+        }
+        
+        .glow {
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ff00, 0 0 40px #0edf0e, 0 0 50px #0edf0e, 0 0 60px #0edf0e, 0 0 70px #0edf0e;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $(".fri").hide();
+            $(".bro").hide()
+            $("#equi").hide();;
+            $("#equi").ready(function() {
+                $(this).hide();
+            });
+            $("#text").mouseenter(function() {
+                $('#text').animate({
+                    height: '90%',
+
+                }, "slow");
+
+            });
+            $("#text").mouseleave(function() {
+
+                $('#text').animate({
+                    height: '50%',
+
+                }, "slow");
+            });
+            $(".light").mousemove(function() {
+                $(".light").animate({
+                    opacity: '0.0'
+                }, "fast");
+                $(".light").animate({
+                    opacity: '1.0'
+                }, "fast");
+            });
+            $(".button").mouseenter(function() {
+                $('.year').animate({
+                    left: '50px',
+
+                }, "slow");
+
+            });
+            $(".button").mouseleave(function() {
+                $('.year').animate({
+                    left: '-250px',
+
+                }, "slow");
+
+            });
+            $(".year").mouseenter(function() {
+                $('.year').animate({
+                    left: '50px',
+
+                }, "slow");
+                $(".button").text("OK");
+
+            });
+            $(".button").click(function() {
+                var x = $('#years').val();
+                $('h1').text(2019 - x);
+                $('h1').animate({
+                    opacity: '1'
+                }, 10);
+                $('h1').animate({
+                    fontSize: '500px'
+                }, "slow");
+                $('h1').animate({
+                    opacity: '0'
+                }, 1000);
+                $('h1').animate({
+                    fontSize: '100px'
+                }, "slow");
+
+            });
+            $("#im").mouseenter(function() {
+                $('#im').animate({
+                    top: '-=500px',
+                    opacity: '0.7',
+                }, 5000);
+
+            });
+            $("#im").mouseleave(function() {
+                $('#im').animate({
+                    top: '+=500px',
+                    opacity: '0.7',
+                }, 5000);
+                $('.bro').hide();
+
+            });
+            $("#ima").mouseenter(function() {
+                $('#ima').animate({
+                    top: '-=300px',
+                    opacity: '0.7',
+                }, 5000);
+
+            });
+            $("#ima").mouseleave(function() {
+                $('#ima').animate({
+                    top: '+=300px',
+                    opacity: '0.7',
+                }, 5000);
+                $('.fri').hide();
+
+
+            });
+            $("#ima").click(function() {
+                $(".fri").show();
+
+            });
+            $("#im").click(function() {
+                $(".bro").show();
+
+            });
+        });
+        $(document).keydown(function(event) {
+            $('#equi').show();
+            $('#play').trigger("play");
+
+        });
+        $(document).keyup(function(event) {
+            $('#equi').hide();
+            $('#play').trigger("pause");
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <div class='audio'><audio id="play" controls><source src='music/music.mp3' type="audio/mpeg"></audio></div>
+        <div class="equilizer" id="equi">
+            <img src="images/equ2.gif" />
+            <img src="images/equ2.gif" />
+            <img src="images/equ2.gif" />
+            <img src="images/equ2.gif" />
+            <img src="images/equ2.gif" />
+        </div>
+    </div>
+    <div>
+        <img class="light" src="images/light3.png" />
+    </div>
+    <div id="tet">
+        <img id="text" src="images/text7.png" />
+    </div>
+    <div>
+        <input class="year" type="number" id="years" placeholder="Year" />
+        <button class="button">??</button>
+    </div>
+    <h1></h1>
+    <div>
+        <img id="im" src="images/adi.jpeg" />
+    </div>
+    <div>
+        <img id="ima" src="images/avi.jpg" />
+    </div>
+    <p class="fri glow">Friend</p>
+    <p class="bro glow">Brother</p>
+
+
+
+</body>
+
+</html>
