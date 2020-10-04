@@ -1,10 +1,8 @@
 <html>
-
 <head>
     <script type="text/javascript" src="jquery-3.4.1.js"></script>
     <style>
-        body,
-        .bg {
+        body.bg {
             /* The image used */
             background-image: url("images/bday5.jpg");
             /* Full height */
@@ -15,31 +13,31 @@
             background-size: cover;
         }
         /*fixing the postion of equalizer*/
-        .equilizer {
+        .equilizer{
             position: fixed;
             bottom: -90px;
             left: 5%;
         }
         /*not displaying audio tag at the start*/
-        .audio {
+        .audio{
             display: none;
         }
         
-        .light {
+        .light{
             position: fixed;
             top: -40px;
             left: -30px;
             width: 105%;
         }
         
-        #text {
+        #text{
             position: fixed;
             top: 150px;
             left: 500px;
             height: 50%;
         }
         /*styling button*/
-        .button {
+        .button{
             background-color: rgb(67, 150, 218);
             /* Green */
             border: none;
@@ -56,8 +54,7 @@
             top: 350px;
             left: 0px;
         }
-        
-        .year {
+        .year{
             background-color: rgb(20, 152, 214);
             /* Green */
             border: none;
@@ -73,16 +70,14 @@
             top: 350px;
             left: -200px;
         }
-        
-        h1 {
+         h1{
             position: fixed;
             top: 0px;
             font-family: Courier;
             font-size: 100px;
             color: rgba(28, 39, 136, 0.877);
         }
-        
-        #im {
+         #im{
             position: fixed;
             bottom: -330px;
             left: 1200px;
@@ -90,8 +85,7 @@
             box-shadow: 0px 0px 5px rgb(255, 255, 255);
             border-radius: 5%;
         }
-        
-        #ima {
+         #ima{
             position: fixed;
             bottom: -270px;
             left: 120px;
@@ -99,8 +93,7 @@
             box-shadow: 0px 0px 5px rgb(255, 255, 255);
             border-radius: 5%;
         }
-        
-        .fri {
+        .fri{
             position: fixed;
             bottom: -20px;
             left: 160px;
@@ -136,7 +129,7 @@
         }
     </style>
     <script>
-        //initiate jquery events when document is ready
+        /*initiate jquery events when document is ready*/
         $(document).ready(function() {
             $(".fri").hide();
             $(".bro").hide()
@@ -266,7 +259,6 @@
      
     <small>jquery project</small>
     <div class="bg">
-
         <div class='audio'><audio id="play" controls><source src='music/music.mp3' type="audio/mpeg"></audio></div>
         <div class="equilizer" id="equi">
             <img src="images/equ2.gif" />
@@ -286,7 +278,7 @@
         <input class="year" type="number" id="years" placeholder="Year" />
         <button class="button">??</button>
     </div>
-    <h1></h1>
+    
     <div>
         <img id="im" src="images/adi.jpeg" />
     </div>
@@ -297,7 +289,7 @@
     <p class="bro glow">Brother</p>
 
 
-<small>the end</small>
+    <small>the end</small>
 </body>
 
 </html>
